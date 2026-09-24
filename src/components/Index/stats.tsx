@@ -1,5 +1,4 @@
 import { Colors } from "@/constants/colors";
-import { Sizes } from "@/constants/sizes";
 import { rfs } from "@/util/responsiveFontSizing";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -30,8 +29,7 @@ export default function Stats({ best = 1, stars = 3, streak = 5 }: StatsProps) {
 
 const styles = StyleSheet.create({
   root: {
-    margin: Sizes.scrW * 0.1,
-    height: Sizes.scrW * 0.16,
+    height: "100%",
     width: "100%",
     flexDirection: "row",
   },

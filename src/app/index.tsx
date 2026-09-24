@@ -47,15 +47,17 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     width: "80%",
+    marginVertical: 10,
   },
   hero: {
     height: "50%",
   },
   stats: {
-    height: "20%",
+    height: "10%",
   },
   buttons: {
     height: "25%",
+    gap: 20,
     justifyContent: "flex-start",
   },
   buttonsRow: {
