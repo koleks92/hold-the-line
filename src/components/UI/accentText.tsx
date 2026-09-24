@@ -9,9 +9,8 @@ export default function AccentText({ children }: PropsWithChildren) {
 
 const styles = StyleSheet.create({
   root: {
-    fontFamily: "Outfit",
+    fontFamily: "Outfit500",
     color: Colors.fontMuted,
-    fontWeight: 700,
     fontSize: rfs(12),
     letterSpacing: 3,
   },
