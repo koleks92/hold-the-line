@@ -1,12 +1,11 @@
+import ButtonMain from "@/components/UI/buttonMain";
+import Screen from "@/components/UI/screen";
 import { goBack } from "expo-router/build/global-state/router";
-import { Pressable, Text, View } from "react-native";
 
 export default function Levels() {
   return (
-    <View>
-      <Pressable onPress={() => goBack()}>
-        <Text>Go back</Text>
-      </Pressable>
-    </View>
+    <Screen padding={true}>
+      <ButtonMain onPress={goBack}>Text</ButtonMain>
+    </Screen>
   );
 }
