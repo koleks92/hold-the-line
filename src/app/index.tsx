@@ -41,7 +41,8 @@ export default function Index() {
       </View>
       {/* FOOTER */}
       <View style={styles.footer}>
-        <Text>Version: {pkg.version}</Text>
+        <Text>v{pkg.version}</Text>
+        <Text>Hold The Line</Text>
       </View>
     </Screen>
   );
