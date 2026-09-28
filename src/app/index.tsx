@@ -5,7 +5,8 @@ import AccentText from "@/components/UI/accentText";
 import ButtonMain from "@/components/UI/buttonMain";
 import Screen from "@/components/UI/screen";
 import { useRouter } from "expo-router";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import pkg from "../../package.json";
 
 export default function Index() {
   const router = useRouter();
@@ -38,6 +39,10 @@ export default function Index() {
           </ButtonMain>
         </View>
       </View>
+      {/* FOOTER */}
+      <View style={styles.footer}>
+        <Text>Version: {pkg.version}</Text>
+      </View>
     </Screen>
   );
 }
@@ -53,7 +58,7 @@ const styles = StyleSheet.create({
     height: "50%",
   },
   stats: {
-    height: "10%",
+    height: "8%",
   },
   buttons: {
     height: "25%",
@@ -64,5 +69,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     justifyContent: "space-between",
+  },
+  footer: {
+    flex: 1,
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-end",
   },
 });
