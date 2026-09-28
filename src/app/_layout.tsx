@@ -14,6 +14,7 @@ export default function RootLayout() {
     Outfit300: require("@/assets/fonts/Outfit-Light.ttf"),
     Outfit400: require("@/assets/fonts/Outfit-Regular.ttf"),
     Outfit500: require("@/assets/fonts/Outfit-Medium.ttf"),
+    Outfit600: require("@/assets/fonts/Outfit-SemiBold.ttf"),
     Outfit700: require("@/assets/fonts/Outfit-Bold.ttf"),
     Outfit800: require("@/assets/fonts/Outfit-ExtraBold.ttf"),
   });
