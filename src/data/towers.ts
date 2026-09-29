@@ -1,4 +1,4 @@
-type TowerType = "basic" | "sniper" | "slow";
+export type TowerType = "basic" | "sniper" | "slow";
 
 type Tower = {
   name: string;

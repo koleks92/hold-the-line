@@ -1,4 +1,4 @@
-type EnemyType = "basic" | "fast" | "slow";
+export type EnemyType = "basic" | "fast" | "slow";
 
 type Enemy = {
   name: string;
