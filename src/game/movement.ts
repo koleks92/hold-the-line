@@ -1,3 +1,4 @@
+import { ENEMIES } from "@/data/enemies";
 import { EnemyInstance } from "./types";
 
 type MoveForwardProps = {
@@ -7,6 +8,7 @@ type MoveForwardProps = {
   deltaMs: number;
 };
 
+// Move one step
 export function moveForward({
   current,
   target,
@@ -33,10 +35,10 @@ export function moveForward({
   };
 }
 
+// Move along the path
 export function moveEnemyAlongPath(
   enemy: EnemyInstance,
   path: { x: number; y: number }[],
-  speed: number,
   deltaMs: number,
 ): EnemyInstance {
   // 1. if status is already "finished", return enemy unchanged
@@ -45,11 +47,12 @@ export function moveEnemyAlongPath(
   }
   // 2. get target = path[enemy.targetIndex]
   const target = path[enemy.targetIndex];
+
   // 3. compute new position with moveForward
   const newPosition = moveForward({
     current: enemy.currentPosition,
     target: target,
-    speed: speed,
+    speed: ENEMIES[enemy.type].speed,
     deltaMs: deltaMs,
   });
   // 4. check if newPosition equals target (arrived)
@@ -75,4 +78,13 @@ export function moveEnemyAlongPath(
     ...enemy,
     currentPosition: newPosition,
   };
+}
+
+// Move multiple items
+export function moveEnemies(
+  enemies: EnemyInstance[],
+  path: { x: number; y: number }[],
+  deltaMs: number,
+): EnemyInstance[] {
+  return enemies.map((enemy) => moveEnemyAlongPath(enemy, path, deltaMs));
 }
