@@ -1,6 +1,7 @@
 import { EnemyType } from "./enemies";
 import { TowerType } from "./towers";
 
+// Types
 type SpawnGroup = {
   enemy: EnemyType;
   count: number;
@@ -27,8 +28,16 @@ export const LEVELS = [
     id: 1,
     name: "Before everything",
     path: [
-      { x: 0, y: 0 },
-      { x: 2, y: 2 },
+      { x: 1, y: 0 },
+      { x: 1, y: 2 },
+      { x: 3, y: 2 },
+      { x: 3, y: 5 },
+      { x: 1, y: 5 },
+      { x: 1, y: 8 },
+      { x: 6, y: 8 },
+      { x: 6, y: 9 },
+      { x: 4, y: 9 },
+      { x: 4, y: 11 },
     ],
     waves: [
       [{ enemy: "basic", count: 10, interval: 100, delay: 20000 }],
