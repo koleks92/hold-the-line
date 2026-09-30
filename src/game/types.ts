@@ -1,7 +1,7 @@
 import { EnemyType } from "@/data/enemies";
 import { TowerType } from "@/data/towers";
 
-type EnemyInstance = {
+export type EnemyInstance = {
   id: number;
   type: EnemyType;
   currentHealth: number;
