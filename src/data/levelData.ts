@@ -11,18 +11,17 @@ type SpawnGroup = {
 
 type Wave = SpawnGroup[];
 
-type Path = { x: number; y: number };
+export type Point = { x: number; y: number };
 
 type Level = {
   id: number;
   name: string;
-  path: Path[];
+  path: Point[];
   waves: Wave[];
   startMoney: number;
   lives: number;
   allowedTowers: TowerType[];
 };
-
 export const LEVELS = [
   {
     id: 1,
@@ -40,12 +39,12 @@ export const LEVELS = [
       { x: 4, y: 11 },
     ],
     waves: [
-      [{ enemy: "basic", count: 10, interval: 100, delay: 20000 }],
+      [{ enemy: "basic", count: 1, interval: 500, delay: 2000 }],
       [
         {
           enemy: "basic",
-          count: 15,
-          interval: 1000,
+          count: 1,
+          interval: 500,
           delay: 20000,
         },
       ],
