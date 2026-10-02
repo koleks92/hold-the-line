@@ -10,7 +10,7 @@ export type EnemyInstance = {
   status: "moving" | "finished" | "killed";
 };
 
-type TowerInstance = {
+export type TowerInstance = {
   id: number;
   type: TowerType;
   position: { x: number; y: number };
@@ -18,13 +18,12 @@ type TowerInstance = {
   nextShotAt: number;
 };
 
-type GameState = {
+export type GameState = {
   enemies: EnemyInstance[];
   towers: TowerInstance[];
   money: number;
   lives: number;
   elapsed: number;
-  waveIndex: number;
-  groupIndex: number;
-  spawnedCount: number;
+  spawnedCounts: number[];
+  nextEnemyId: number;
 };
