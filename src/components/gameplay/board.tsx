@@ -5,10 +5,11 @@ import { StyleSheet, View } from "react-native";
 import { gameConstants } from "@/constants/game";
 
 type BoardProps = {
+  children: React.ReactNode;
   path: Point[];
 };
 
-export default function Board({ path }: BoardProps) {
+export default function Board({ path, children }: BoardProps) {
   // Create a path set
   const pathSet = new Set(expandPath(path).map((p) => `${p.x},${p.y}`));
 
@@ -28,6 +29,7 @@ export default function Board({ path }: BoardProps) {
           </View>
         );
       })}
+      {children}
     </View>
   );
 }
