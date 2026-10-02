@@ -2,7 +2,7 @@ import { EnemyType } from "./enemies";
 import { TowerType } from "./towers";
 
 // Types
-type SpawnGroup = {
+export type SpawnGroup = {
   enemy: EnemyType;
   count: number;
   interval: number;
@@ -13,7 +13,7 @@ type Wave = SpawnGroup[];
 
 export type Point = { x: number; y: number };
 
-type Level = {
+export type Level = {
   id: number;
   name: string;
   path: Point[];
